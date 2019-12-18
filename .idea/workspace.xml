@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b751444a-6c99-45ec-bcb2-1431722e3c0c" name="Default Changelist" comment="" />
+    <list default="true" id="b751444a-6c99-45ec-bcb2-1431722e3c0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +18,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1V7PuzvH0Vc7mKTi0qWD6Pfl2BN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,63 +29,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/stdlib.jar!/" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="BouncingBall" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="BouncingBall" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="BouncingBall" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,26 +81,30 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="874" y="445" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576601432459" />
+    <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1576667701999">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="772" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576667701999" />
     <state x="729" y="297" key="FileChooserDialogImpl" timestamp="1576601565061">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="729" y="297" key="FileChooserDialogImpl/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576601565061" />
-    <state width="2005" height="376" key="GridCell.Tab.0.bottom" timestamp="1576615813313">
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1576669111876">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="376" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576615813313" />
-    <state width="2005" height="376" key="GridCell.Tab.0.center" timestamp="1576615813313">
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576669111876" />
+    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1576669111876">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="376" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576615813313" />
-    <state width="2005" height="376" key="GridCell.Tab.0.left" timestamp="1576615813313">
+    <state width="2005" height="305" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576669111876" />
+    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1576669111876">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="376" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576615813313" />
-    <state width="2005" height="376" key="GridCell.Tab.0.right" timestamp="1576615813313">
+    <state width="2005" height="305" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576669111876" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1576669111876">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="376" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576615813313" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576669111876" />
     <state width="2005" height="376" key="GridCell.Tab.1.bottom" timestamp="1576615813313">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -159,6 +125,14 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="505" y="130" key="SettingsEditor/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576601568228" />
+    <state x="834" y="473" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576633223228">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="834" y="473" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576633223228" />
+    <state x="465" y="176" key="new project wizard" timestamp="1576617092546">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="465" y="176" key="new project wizard/0.0.2048.1112/-1920.152.1920.1040@0.0.2048.1112" timestamp="1576617092546" />
     <state x="681" y="259" key="run.anything.popup" timestamp="1576615718736">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
