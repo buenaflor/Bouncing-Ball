@@ -17,15 +17,16 @@ class Boundaries {
 class Ball {
     private double x;
     private double y;
-    private double vx;
-    private double vy;
+    double vx;
+    double vy;
     private double airDrag = 0.99;
     private double groundFriction = 0.98;
-    private double elasticity = 0.8;
+    private double elasticity = 0.6;            // Elasticity determines how much the ball bounces during collisions
     private double gravity = 0.981;
     private Boundaries boundaries;
     private Color color;
     int radius;
+    double mass = 10;                            // Mass is an important factor when calculating the new velocity during ball to ball collisions
 
     Ball(double x, double y, double vx, double vy, int radius, Boundaries boundaries, Color color) {
         this.x = x;
@@ -37,25 +38,12 @@ class Ball {
         this.color = color;
     }
 
-    void setXVelocity(double vx) {
-        this.vx = vx;
-    }
-
-    void setYVelocity(double vy) {
-        this.vy = vy;
-    }
-
-    void setElasticity(double value) {
-        this.elasticity = value;
-    }
-
-    void setGroundFriction(double value) {
-        this.groundFriction = value;
-    }
-
-    void setAirDrag(double value) {
-        this.airDrag = value;
-    }
+    void setXVelocity(double vx) { this.vx = vx; }
+    void setYVelocity(double vy) { this.vy = vy; }
+    void setMass(double value) { this.mass = value; }
+    void setElasticity(double value) { this.elasticity = value; }
+    void setGroundFriction(double value) { this.groundFriction = value; }
+    void setAirDrag(double value) { this.airDrag = value; }
 
     // Make sure that StdDraw.clear() is called before drawing
     void draw() {
@@ -63,7 +51,11 @@ class Ball {
         StdDraw.filledCircle(x, y, radius);
     }
 
+    private double oldX = 0;
+    private double oldY = 0;
     void updateVelocity() {
+        oldX = x;
+        oldY = y;
         x += vx;
         y += vy;
 
@@ -85,11 +77,16 @@ class Ball {
         if (y >= (boundaries.bottom - radius)) {
             vx *= groundFriction;
         }
-    }
 
-    void updateBounce() {
-        x = (x < (boundaries.left + radius) ? (boundaries.left + radius) : (boundaries.right - radius));
-        vx = -(vx * elasticity);
+        // Balls are now standing still
+        if (Math.abs(oldX - x) < 0.1) {
+            vx = 0;
+        }
+
+        // Balls are not bouncing anymore
+        if (Math.abs(oldY - y) < 0.1 && y == boundaries.bottom - radius) {
+            vy = 0;
+        }
     }
 
     void setPosition(double x, double y) {
@@ -104,25 +101,33 @@ class Ball {
     }
 
     boolean collides(Ball ball) {
-        return  distance(ball) <= radius + ball.radius;
+        return distance(ball) <= radius + ball.radius;
     }
 
-    void reverse() {
-        vx = -vx;
-        vy = -vy;
+    void reverse(Ball ball) {
+        double newVX0 = (vx * (mass - ball.mass) + (2 * ball.mass * ball.vx)) / (mass + ball.mass) * elasticity;
+        double newVY0 = (vy * (mass - ball.mass) + (2 * ball.mass * ball.vy)) / (mass + ball.mass) * elasticity;
+        double newVX1 = (vx * (ball.mass - mass) + (2 * mass * vx)) / (mass + ball.mass) * elasticity;
+        double newVY1 = (vy * (ball.mass - mass) + (2 * mass * vy)) / (mass + ball.mass) * elasticity;
+
+        vx = newVX0;
+        vy = newVY0;
+        ball.setXVelocity(newVX1);
+        ball.setYVelocity(newVY1);
     }
 
     double distance(Ball ball) {
         return Math.sqrt(Math.pow(x - ball.x, 2) + Math.pow(y - ball.y, 2));
     }
 }
+
 public class Main {
     public static void main(String[] args) {
         int left = 0;
-        int right = 400;
+        int right = 500;
         int top = 0;
         int bottom = 400;
-
+        StdDraw.setCanvasSize(right, bottom);
         StdDraw.setXscale(left, right);
         StdDraw.setYscale(bottom, top);
         StdDraw.enableDoubleBuffering();
@@ -137,8 +142,6 @@ public class Main {
         // Random initial coords
         double initialX = 350;
         double initialY = top + circleRadius;
-        double posX = initialX;
-        double posY = initialY;
 
         // Random initial velocity
         double vx = -15.5;
@@ -149,7 +152,8 @@ public class Main {
         double shootBallButtonPosY = shootBallButtonSize / 2;
 
         Ball ball1 = new Ball(initialX, initialY, vx, vy, circleRadius, boundaries, Color.CYAN);
-        Ball ball2 = new Ball(initialX - 200, initialY, vx, vy, circleRadius, boundaries, Color.darkGray);
+        Ball ball2 = new Ball(initialX - 200, initialY, -vx, vy, circleRadius, boundaries, Color.darkGray);
+        ball2.setMass(40);
 
         while (true) {
             double mouseX = StdDraw.mouseX();
@@ -159,9 +163,9 @@ public class Main {
 
             if (isShootBallButtonPressed) {
                 ball1.setPosition(initialX, initialY);
-                ball2.setPosition(initialX - 200, initialY + 50);
-                ball1.setXVelocity(-15);
-                ball2.setXVelocity(-15);
+                ball2.setPosition(initialX, initialY + 100);
+                ball1.setXVelocity(40);
+                ball2.setXVelocity(-25);
             }
 
             if (ball1.isPressed()) {
@@ -172,11 +176,10 @@ public class Main {
                 if (isFreefallActive) {
                     ball1.updateVelocity();
                     ball2.updateVelocity();
-
                     if (ball1.collides(ball2)) {
-                        ball1.reverse();
-                        ball2.reverse();
+                        ball1.reverse(ball2);
                     }
+                    //System.out.println(ball1.vy);
                 }
             }
 
