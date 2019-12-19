@@ -179,7 +179,6 @@ public class Main {
                     if (ball1.collides(ball2)) {
                         ball1.reverse(ball2);
                     }
-                    //System.out.println(ball1.vy);
                 }
             }
 
