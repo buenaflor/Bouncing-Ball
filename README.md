@@ -10,4 +10,4 @@ It is still a work in progress. I will update and improve it further.
 - Surface collision: e.g a line in the middle of the canvas
 - Usage of mouse acceleration so it is possible to shoot the ball with the mouse
 
-![](https://i.imgur.com/5owrXlG.gif)
+![](https://i.imgur.com/zpIJTtp.gif)
